@@ -393,8 +393,42 @@ img {
 }
 
 .footer {
-  background-color: #2c343e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   margin-bottom: 135px;
+  background-color: #2c343e;
+  padding: 47px 86px;
+}
+
+.footer .navs, .footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.footer .social {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.footer a {
+  color: #83888F;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.footer .navs li:not(:last-child) {
+  margin-right: 32px;
+}
+
+.footer .navs li:not(:last-child) {
+  margin-right: 32px;
 }
 /*# sourceMappingURL=main.css.map */
