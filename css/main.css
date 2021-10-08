@@ -381,4 +381,20 @@ img {
   white-space: nowrap;
   width: 1px;
 }
+
+.d-flex {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer {
+  background-color: #2c343e;
+  width: 100%;
+  margin-bottom: 135px;
+}
 /*# sourceMappingURL=main.css.map */
