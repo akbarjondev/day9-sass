@@ -22,10 +22,12 @@
   }
 
   a {
-    color: #83888F;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 900;
+    // color: #83888F;
+    // text-decoration: none;
+    // text-transform: uppercase;
+    // font-weight: 900;
+
+    @include resetLink(red);
   }
 
   .navs li:not(:last-child) {
@@ -34,5 +36,13 @@
 
   .navs li:not(:last-child) {
     margin-right: 32px;
+  }
+
+  .navs li::before {
+    @include forBefore(35px, 45px, green, block);
+  }
+
+  .social li::after {
+    @include forBefore(15px, 15px, yellow, block)
   }
 }
