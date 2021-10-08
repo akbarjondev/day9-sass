@@ -12,3 +12,10 @@
   background-color: $bgc;
   border-radius: 12px;
 }
+
+@mixin box($width, $height, $bg-color, $bdrs) {
+  width: $width;
+  height: $height;
+  background-color: $bg-color;
+  border-radius: $bdrs;
+}

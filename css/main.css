@@ -382,6 +382,11 @@ img {
   width: 1px;
 }
 
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
 .d-flex {
   height: 100%;
   display: -webkit-box;
@@ -405,6 +410,11 @@ img {
   padding: 47px 86px;
 }
 
+.footer__link {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
 .footer .navs, .footer .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,40 +422,73 @@ img {
   list-style-type: none;
 }
 
+.footer .navs {
+  margin-left: 103px;
+}
+
 .footer .social {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  margin-left: auto;
 }
 
 .footer a {
+  color: #83888F;
   text-decoration: none;
+  text-transform: uppercase;
   font-weight: 900;
-  color: red;
 }
 
 .footer .navs li:not(:last-child) {
   margin-right: 32px;
 }
 
-.footer .navs li:not(:last-child) {
-  margin-right: 32px;
+.footer .social li:not(:last-child) {
+  margin-right: 24px;
 }
 
-.footer .navs li::before {
-  content: "";
-  display: block;
-  width: 35px;
-  height: 45px;
-  background-color: green;
-  border-radius: 12px;
+@media only screen and (max-width: 768px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .social, .footer .navs {
+    margin-left: 0;
+  }
+  .footer .navs {
+    margin-top: 32px;
+    margin-bottom: 64px;
+  }
 }
 
-.footer .social li::after {
-  content: "";
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: yellow;
-  border-radius: 12px;
+@media only screen and (max-width: 375px) {
+  .footer {
+    padding: 0;
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+  .footer .navs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 48px;
+  }
+  .footer .navs__item {
+    margin: 0 !important;
+    margin-bottom: 24px !important;
+  }
+  .footer .navs a {
+    white-space: nowrap;
+  }
+  .footer .social li {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

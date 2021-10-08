@@ -12,37 +12,81 @@
   background-color: $main-blue;
   padding: 47px 86px;
 
+  &__link {
+    flex-shrink: 0;
+  }
+
   .navs, .social {
     display: flex;
     list-style-type: none;
   }
 
+  .navs {
+    margin-left: 103px;
+  }
+
   .social {
-    align-self: flex-end;
+    margin-left: auto;
   }
 
   a {
-    // color: #83888F;
-    // text-decoration: none;
-    // text-transform: uppercase;
-    // font-weight: 900;
-
-    @include resetLink(red);
+    color: #83888F;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
   }
 
   .navs li:not(:last-child) {
     margin-right: 32px;
   }
 
-  .navs li:not(:last-child) {
-    margin-right: 32px;
+  .social li:not(:last-child) {
+    margin-right: 24px;
   }
+}
 
-  .navs li::before {
-    @include forBefore(35px, 45px, green, block);
+// tablet
+@media only screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+
+    .social, .navs {
+      margin-left: 0;
+    }
+
+    .navs {
+      margin-top: 32px;
+      margin-bottom: 64px;
+    }
   }
+}
 
-  .social li::after {
-    @include forBefore(15px, 15px, yellow, block)
+@media only screen and (max-width: 375px) {
+  .footer {
+    padding: 0;
+    padding-top: 54px;
+    padding-bottom: 54px;
+
+    .navs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 48px;
+
+      &__item {
+        margin: 0 !important;
+        margin-bottom: 24px !important;
+      }
+
+      a {
+        white-space: nowrap;
+      }
+    }
+
+    .social {
+      li {
+        margin: 0;
+      }
+    }
   }
 }
